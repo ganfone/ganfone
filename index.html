@@ -184,6 +184,23 @@
       .card {
         width: 90%; /* 手機上卡片佔螢幕寬度 */
       }
+	  /* 手機版：讓服務項目文字永遠顯示 */
+  .overlay {
+    opacity: 1 !important;   /* 預設顯示 */
+    background: rgba(0,0,0,0.4); /* 半透明背景，確保文字清楚 */
+    position: static;         /* 改為正常排版，文字會出現在圖片下方 */
+    color: #333;              /* 改深色字，比較適合白底 */
+    padding: 1rem;
+  }
+
+  .card img {
+    border-radius: 12px 12px 0 0; /* 圖片上圓角 */
+  }
+
+  .card {
+    border-radius: 12px; /* 整張卡片有圓角 */
+    overflow: hidden;
+  }
     }
   </style>
 </head>
@@ -262,6 +279,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
