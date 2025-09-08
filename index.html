@@ -114,23 +114,27 @@
 
     /* 遮罩文字區（初始隱藏） */
     .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      border-radius: 12px;
-      text-align: center;
-      padding: 1rem;
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 垂直置中 */
+  align-items: center;       /* 水平置中 */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+  text-align: center;        /* 文字置中 */
+  padding: 1rem;
+  word-wrap: break-word;     /* 遇到長字自動換行 */
+  overflow-wrap: break-word; /* 更保險，支援現代瀏覽器 */
+  box-sizing: border-box;    /* padding 不會把區塊撐爆 */
+}
+
 
     /* 滑鼠移上去顯示內容 */
     .card:hover .overlay {
@@ -279,6 +283,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
