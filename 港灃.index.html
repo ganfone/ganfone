@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>港灃工程服務有限公司</title>
+  <style>
+    /* ====== 全域樣式 ====== */
+    body {
+      font-family: "Arial", sans-serif; /* 字體 */
+      margin: 0;
+      padding: 0;
+      background: #ffffff; /* 白色背景 */
+      color: #333;
+      scroll-behavior: smooth; /* 點擊導覽列時平滑滾動 */
+    }
+	h2 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* ====== 頁首區塊（背景大圖 + 標題） ====== */
+    header {
+      background: url("首頁.jpg") center/cover no-repeat; /*臨時背景圖片*/
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* 白字加陰影，讓字更清楚 */
+    }
+    header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* ====== 導覽列 ====== */
+    nav {
+      background: #007799; /* 深藍 */
+      padding: 0.8rem;
+      text-align: center;
+      position: sticky; /* 滾動時會固定在頂端 */
+      top: 0;
+      z-index: 100; /* 確保蓋在其他元素上 */
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700; /* 滑鼠移上去變金黃色 */
+    }
+
+    /* ====== 首屏 hero 區塊 ====== */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f0e6d2;
+      animation: fadeIn 1.5s ease-in-out; /* 淡入動畫 */
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    /* ====== 區塊通用設定 ====== */
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    /* ====== 服務項目 ====== */
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+
+    .card-image {
+      position: relative;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+
+    /* 滑鼠移上去圖片縮放 */
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* 遮罩文字區（初始隱藏） */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      border-radius: 12px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* 滑鼠移上去顯示內容 */
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    /* ====== 按鈕樣式 ====== */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 25px;
+      background: #6f4e37;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #a47148; /* hover 時變淺咖啡色 */
+    }
+
+    /* ====== 頁尾區塊 ====== */
+    footer {
+      background: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* ====== 動畫效果 ====== */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ====== 手機版自適應 RWD ====== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .menu {
+        flex-direction: column; /* 手機上改成上下排列 */
+        align-items: center;
+      }
+      .card {
+        width: 90%; /* 手機上卡片佔螢幕寬度 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 頁首區塊 -->
+  <header>
+    <h1>港灃工程服務有限公司</h1>
+    <p> </p>
+  </header>
+
+  <!-- 導覽列 -->
+  <nav>
+    <a href="#about">關於港灃</a>
+    <a href="#menu">服務項目</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
+
+  <!-- 關於我們 -->
+  <section id="about" class="section">
+    <h2>關於我們</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.8;">
+    <p>
+      本公司主要據點位於港口碼頭，專注於提供專業的船舶服務與產業支援。我們致力於串聯船東與客戶之間的合作，
+      確保航運作業能夠順暢且高效，並協助建立長期且互信的合作關係。
+    </p>
+    <p>
+      除了媒合服務外，我們亦具備完善的大型機具維修能力，擁有專業技術團隊與維修設備，
+      能針對港口及航運相關的大型機具進行檢測、保養與修繕，確保作業安全與設備效能。
+    </p>
+    <p>
+      憑藉著對產業的深刻理解與豐富經驗，我們持續提升服務品質，為船東、貨主及合作夥伴提供最可靠的支持，
+      共同推動航運產業的穩健發展。
+    </p>
+  </div>
+</section>
+
+  <!-- 服務項目 -->
+<section id="menu" class="section">
+  <h2>服務項目</h2>
+  <div class="menu">
+    <!-- 服務項目 1 -->
+    <div class="card">
+      <div class="card-image"> 
+        <img src="船務.jpeg" alt="船務"> 
+        <div class="overlay">
+          <h3>船務媒合</h3>
+          <p>內容留空</p>
+        </div>
+      </div>
+    </div>
+    <!-- 服務項目 2 -->
+    <div class="card">
+      <div class="card-image"> 
+        <img src="機具.jpeg" alt="機具"> 
+        <div class="overlay">
+          <h3>機具維護</h3>
+          <p>內容留空</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- 聯絡我們 -->
+  <section id="contact" class="section">
+    <h2>聯絡我們</h2>
+    <p>Address：812高雄市小港區東亞南路6號1樓</p>
+<p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
+    <p>Email：ganfone1@gmail.com</p>
+    <p>Tel：07-8313999 # 375</p>
+    <p>Fax：07-8128955</p>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>© 2025 ganfone. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
