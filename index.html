@@ -285,13 +285,14 @@
       document.querySelector("#menu h2").textContent = "Services";
       document.querySelector("#contact h2").textContent = "Contact";
 
-      // About Us 內文
+      // About 內文 → 英文 + 置中
       document.querySelector("#about div").innerHTML = `
-        <p>Our company is based at the port terminal, specializing in providing professional maritime services and industrial support. We are committed to bridging cooperation between shipowners and clients, ensuring smooth and efficient shipping operations, while fostering long-term and trustworthy partnerships.</p>
-        <p>In addition to brokerage services, we also provide ship leasing and sales. According to customer needs, we can offer suitable vessel resources and complete transaction support. Whether for short-term leasing or long-term acquisition, we ensure safe, transparent, and professional processes to help clients flexibly allocate resources.</p>
-        <p>We also have a professional maintenance team and facilities for large-scale equipment at ports, capable of inspection, maintenance, and repair of port and shipping machinery, ensuring safety and performance.</p>
-        <p>With deep industry expertise and extensive experience, we continuously enhance service quality to provide the most reliable support to shipowners, cargo owners, and partners, contributing to the steady development of the maritime industry.</p>
+      <p>Our company is based at the port terminal, specializing in professional maritime services and industry support. We focus on connecting shipowners and clients to ensure smooth and efficient operations, fostering long-term and trustworthy partnerships.</p>
+      <p>In addition to brokerage services, we also provide vessel leasing and sales, offering suitable ship resources and complete transaction support tailored to client needs.</p>
+      <p>Meanwhile, our technical team provides reliable maintenance for port machinery such as cranes and heavy equipment, ensuring safety and efficiency.</p>
+      <p>With deep industry knowledge and rich experience, we continuously improve service quality and provide reliable support to shipowners, cargo owners, and partners, driving sustainable growth in the shipping industry.</p>
       `;
+      document.querySelector("#about div").style.textAlign = "center";
 
       // 服務項目卡片文字 (手機板)
       document.querySelectorAll(".card-text")[0].innerHTML = `
@@ -350,13 +351,14 @@
       document.querySelector("#menu h2").textContent = "服務項目";
       document.querySelector("#contact h2").textContent = "聯絡方式";
 
-      // About Us 中文
+      // About 內文 → 中文 + 靠左
       document.querySelector("#about div").innerHTML = `
         <p>本公司主要據點位於港口碼頭，專注於提供專業的船舶服務與產業支援。我們致力於串聯船東與客戶之間的合作，確保航運作業能夠順暢且高效，並協助建立長期且互信的合作關係。</p>
         <p>除了媒合服務外，我們亦提供船舶租賃與買賣業務，能依據客戶的需求，提供合適的船舶資源與完整的交易支持。不論是短期租賃或長期購置，我們皆以安全、透明且專業的流程，協助客戶靈活調度與配置資源。</p>
         <p>同時，我們具備完善的大型機具維修能力，擁有專業技術團隊與維修設備，能針對港口及航運相關的大型機具進行檢測、保養與修繕，確保作業安全與設備效能。</p>
-        <p>憑藉著對產業的深刻理解與豐富經驗，我們持續提升服務品質，為船東、貨主及合作夥伴提供最可靠的支持， 共同推動航運產業的穩健發展。</p>
+        <p>憑藉著對產業的深刻理解與豐富經驗，我們持續提升服務品質，為船東、貨主及合作夥伴提供最可靠的支持，共同推動航運產業的穩健發展。</p>
       `;
+      document.querySelector("#about div").style.textAlign = "left";
 
       // 服務項目卡片 中文 (手機板)
       document.querySelectorAll(".card-text")[0].innerHTML = `
@@ -411,4 +413,5 @@
 </script>
 </body>
 </html>
+
 
