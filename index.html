@@ -59,6 +59,22 @@
       color: #ffd700;
     }
 
+    /* ====== 中英切換 ====== */
+    nav button {
+    background: #ffd700;
+    color: #333;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 15px;
+  }
+  nav button:hover {
+    background: #ffb400;
+  }
+
     /* ====== 服務項目 ====== */
     .menu {
       display: flex;
@@ -164,6 +180,15 @@
     <a href="#about">關於港灃</a>
     <a href="#menu">服務項目</a>
     <a href="#contact">聯絡方式</a>
+    <button id="lang-toggle">English</button>
+  </nav>
+
+  <!-- 中英切換 -->
+  <nav>
+  <a href="#about">關於港灃</a>
+  <a href="#menu">服務項目</a>
+  <a href="#contact">聯絡方式</a>
+  <button id="lang-toggle">English</button>
   </nav>
 
   <!-- 關於我們 -->
@@ -270,8 +295,48 @@
   <footer>
     <p>© 2025 ganfone. All Rights Reserved.</p>
   </footer>
+
+  <!-- 中英切換 -->
+<script>
+  const langBtn = document.getElementById("lang-toggle");
+  let isChinese = true;
+
+  langBtn.addEventListener("click", () => {
+    if (isChinese) {
+      // ===== 切換成英文 =====
+      document.querySelector('a[href="#about"]').textContent = "About Us";
+      document.querySelector('a[href="#menu"]').textContent = "Services";
+      document.querySelector('a[href="#contact"]').textContent = "Contact";
+      document.querySelector("header h1").textContent = "Ganfone Engineering Service Co., Ltd.";
+      document.querySelector("#about h2").textContent = "About Us";
+      document.querySelector("#menu h2").textContent = "Services";
+      document.querySelector("#contact h2").textContent = "Contact";
+
+      // ...這裡放切換英文的程式碼 (About、服務項目、聯絡方式)...
+      
+      langBtn.textContent = "中文";
+      isChinese = false;
+    } else {
+      // ===== 切換回中文 =====
+      document.querySelector('a[href="#about"]').textContent = "關於港灃";
+      document.querySelector('a[href="#menu"]').textContent = "服務項目";
+      document.querySelector('a[href="#contact"]').textContent = "聯絡方式";
+      document.querySelector("header h1").textContent = "港灃工程服務有限公司";
+      document.querySelector("#about h2").textContent = "關於港灃";
+      document.querySelector("#menu h2").textContent = "服務項目";
+      document.querySelector("#contact h2").textContent = "聯絡方式";
+
+      // ...這裡放切換中文的程式碼...
+
+      langBtn.textContent = "English";
+      isChinese = true;
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
