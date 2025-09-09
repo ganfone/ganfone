@@ -223,28 +223,48 @@
   </section>
 
   <!-- 聯絡我們 -->
-  <section id="contact" class="section">
-    <h2>聯絡方式</h2>
-    <p>Email：ganfone1@gmail.com</p>
-    <p>Tel：07-8313999 # 375</p>
-    <p>Fax：07-8128955</p>
-    <p>Address：812高雄市小港區東亞南路6號1樓</p>
-    <p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
-  </section>
+<section id="contact" class="section" style="text-align: center;">
+  <h2>聯絡方式</h2>
+  <p>Email：ganfone1@gmail.com</p>
+  <p>Tel：07-8313999 # 375</p>
+  <p>Fax：07-8128955</p>
+  <p>Address：812高雄市小港區東亞南路6號1樓</p>
+  <p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
 
   <!-- Google Map -->
-    <div style="margin-top:20px;">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.596347060602!2d120.33467689999999!3d22.5567888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e02d04b3995c3%3A0x66f0fe86324a6885!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2x5Lqe5Y2X6LevNuiZnw!5e0!3m2!1szh-TW!2stw!4v1757389990362!5m2!1szh-TW!2stw" 
-        width="100%" 
-        height="400" 
-        style="border:0; border-radius:12px;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.596347060602!2d120.33467689999999!3d22.5567888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e02d04b3995c3%3A0x66f0fe86324a6885!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2x5Lqe5Y2X6LevNuiZnw!5e0!3m2!1szh-TW!2stw!4v1757389990362!5m2!1szh-TW!2stw" 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<style>
+  .map-container {
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+  }
+
+  @media (max-width: 768px) {
+    .map-container {
+      max-width: 95%;
+    }
+    .map-container iframe {
+      height: 300px;
+    }
+  }
+</style>
 
   <!-- 頁尾 -->
   <footer>
@@ -252,4 +272,5 @@
   </footer>
 </body>
 </html>
+
 
