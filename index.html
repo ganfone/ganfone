@@ -58,22 +58,20 @@
     nav a:hover {
       color: #ffd700;
     }
-
-    /* ====== 中英切換 ====== */
     nav button {
-    background: #ffd700;
-    color: #333;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-left: 15px;
-  }
-  nav button:hover {
-    background: #ffb400;
-  }
+      background: #ffd700;
+      color: #333;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-left: 15px;
+    }
+    nav button:hover {
+      background: #ffb400;
+    }
 
     /* ====== 服務項目 ====== */
     .menu {
@@ -82,7 +80,6 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-
     .card {
       position: relative;
       overflow: hidden;
@@ -91,18 +88,15 @@
       width: 600px;
       background: #fff;
     }
-
     .card img {
       width: 100%;
       display: block;
       border-radius: 12px 12px 0 0;
       transition: transform 0.4s ease;
     }
-
     .card:hover img {
       transform: scale(1.1);
     }
-
     /* 桌機版 overlay */
     .overlay {
       position: absolute;
@@ -128,7 +122,6 @@
     .card:hover .overlay {
       opacity: 1;
     }
-
     /* 手機版簡短文字 */
     .card-text {
       display: none;
@@ -166,6 +159,27 @@
       text-align: center;
       padding: 1.5rem;
       margin-top: 2rem;
+    }
+
+    /* ====== Google Map ====== */
+    .map-container {
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      .map-container {
+        max-width: 95%;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -210,7 +224,6 @@
           <p>幫您找到最合適的航線與船公司，讓貨物能準時、順利又省成本地送達。</p>
         </div>
       </div>
-
       <!-- 服務項目 2 -->
       <div class="card">
         <img src="Boat.jpg" alt="租賃">
@@ -223,7 +236,6 @@
           <p>不管是短租、長租還是買船，幫您找到合適的船舶，並提供安心透明的交易服務。</p>
         </div>
       </div>
-
       <!-- 服務項目 3 -->
       <div class="card">
         <img src="機具.jpeg" alt="機具">
@@ -240,56 +252,25 @@
   </section>
 
   <!-- 聯絡我們 -->
-<section id="contact" class="section" style="text-align: center;">
-  <h2>聯絡方式</h2>
-  <p>Email：ganfone1@gmail.com</p>
-  <p>Tel：07-8313999 # 375</p>
-  <p>Fax：07-8128955</p>
-  <p>Address：812高雄市小港區東亞南路6號1樓</p>
-  <p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
-
-  <!-- Google Map -->
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.596347060602!2d120.33467689999999!3d22.5567888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e02d04b3995c3%3A0x66f0fe86324a6885!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2x5Lqe5Y2X6LevNuiZnw!5e0!3m2!1szh-TW!2stw!4v1757389990362!5m2!1szh-TW!2stw" 
-      allowfullscreen 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
-
-<style>
-  .map-container {
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
-  }
-
-  @media (max-width: 768px) {
-    .map-container {
-      max-width: 95%;
-    }
-    .map-container iframe {
-      height: 300px;
-    }
-  }
-</style>
+  <section id="contact" class="section" style="text-align: center;">
+    <h2>聯絡方式</h2>
+    <p>Email：ganfone1@gmail.com</p>
+    <p>Tel：07-8313999 # 375</p>
+    <p>Fax：07-8128955</p>
+    <p>Address：812高雄市小港區東亞南路6號1樓</p>
+    <p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
 
   <!-- 頁尾 -->
   <footer>
     <p>© 2025 ganfone. All Rights Reserved.</p>
   </footer>
 
-  <!-- 中英切換 -->
-<script>
+  <!-- 語言切換 -->
+  <script>
   const langBtn = document.getElementById("lang-toggle");
   let isChinese = true;
 
@@ -304,8 +285,59 @@
       document.querySelector("#menu h2").textContent = "Services";
       document.querySelector("#contact h2").textContent = "Contact";
 
-      // ...這裡放切換英文的程式碼 (About、服務項目、聯絡方式)...
-      
+      // About Us 內文
+      document.querySelector("#about div").innerHTML = `
+        <p>Our company is based at the port terminal, specializing in providing professional maritime services and industrial support. We are committed to bridging cooperation between shipowners and clients, ensuring smooth and efficient shipping operations, while fostering long-term and trustworthy partnerships.</p>
+        <p>In addition to brokerage services, we also provide ship leasing and sales. According to customer needs, we can offer suitable vessel resources and complete transaction support. Whether for short-term leasing or long-term acquisition, we ensure safe, transparent, and professional processes to help clients flexibly allocate resources.</p>
+        <p>We also have a professional maintenance team and facilities for large-scale equipment at ports, capable of inspection, maintenance, and repair of port and shipping machinery, ensuring safety and performance.</p>
+        <p>With deep industry expertise and extensive experience, we continuously enhance service quality to provide the most reliable support to shipowners, cargo owners, and partners, contributing to the steady development of the maritime industry.</p>
+      `;
+
+      // 服務項目卡片文字 (手機板)
+      document.querySelectorAll(".card-text")[0].innerHTML = `
+        <h3>Shipping Brokerage</h3>
+        <p>Helping you find the best routes and carriers so your cargo arrives on time, smoothly, and cost-effectively.</p>
+      `;
+      document.querySelectorAll(".card-text")[1].innerHTML = `
+        <h3>Ship Leasing & Sales</h3>
+        <p>Whether short-term, long-term, or purchasing, we help you find suitable vessels and provide secure, transparent transactions.</p>
+      `;
+      document.querySelectorAll(".card-text")[2].innerHTML = `
+        <h3>Equipment Maintenance</h3>
+        <p>Professional maintenance of port cranes and heavy equipment, ensuring safety and uninterrupted operations.</p>
+      `;
+
+      // 服務項目卡片文字 (桌機 overlay)
+      document.querySelectorAll(".overlay")[0].innerHTML = `
+        <h3>Shipping Brokerage</h3>
+        <p>We specialize in professional shipping brokerage, helping cargo owners connect with carriers to optimize efficiency and reduce costs.</p>
+      `;
+      document.querySelectorAll(".overlay")[1].innerHTML = `
+        <h3>Ship Leasing & Sales</h3>
+        <p>We provide diverse ship leasing and sales services tailored to client needs, ensuring transparent and safe processes from planning to transaction.</p>
+      `;
+      document.querySelectorAll(".overlay")[2].innerHTML = `
+        <h3>Equipment Maintenance</h3>
+        <p>Our team provides regular inspection and maintenance for port equipment such as container cranes, ensuring safety and extending equipment lifespan.</p>
+      `;
+
+      // 聯絡方式
+      document.querySelector("#contact").innerHTML = `
+        <h2>Contact</h2>
+        <p>Email: ganfone1@gmail.com</p>
+        <p>Tel: 07-8313999 # 375</p>
+        <p>Fax: 07-8128955</p>
+        <p>Address: 1F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City 812, Taiwan</p>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.596347060602!2d120.33467689999999!3d22.5567888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e02d04b3995c3%3A0x66f0fe86324a6885!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2x5Lqe5Y2X6LevNuiZnw!5e0!3m2!1szh-TW!2stw!4v1757389990362!5m2!1szh-TW!2stw" 
+            allowfullscreen 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      `;
+
       langBtn.textContent = "中文";
       isChinese = false;
     } else {
@@ -318,7 +350,59 @@
       document.querySelector("#menu h2").textContent = "服務項目";
       document.querySelector("#contact h2").textContent = "聯絡方式";
 
-      // ...這裡放切換中文的程式碼...
+      // About Us 中文
+      document.querySelector("#about div").innerHTML = `
+        <p>本公司主要據點位於港口碼頭，專注於提供專業的船舶服務與產業支援。我們致力於串聯船東與客戶之間的合作，確保航運作業能夠順暢且高效，並協助建立長期且互信的合作關係。</p>
+        <p>除了媒合服務外，我們亦提供船舶租賃與買賣業務，能依據客戶的需求，提供合適的船舶資源與完整的交易支持。不論是短期租賃或長期購置，我們皆以安全、透明且專業的流程，協助客戶靈活調度與配置資源。</p>
+        <p>同時，我們具備完善的大型機具維修能力，擁有專業技術團隊與維修設備，能針對港口及航運相關的大型機具進行檢測、保養與修繕，確保作業安全與設備效能。</p>
+        <p>憑藉著對產業的深刻理解與豐富經驗，我們持續提升服務品質，為船東、貨主及合作夥伴提供最可靠的支持， 共同推動航運產業的穩健發展。</p>
+      `;
+
+      // 服務項目卡片 中文 (手機板)
+      document.querySelectorAll(".card-text")[0].innerHTML = `
+        <h3>船務媒合</h3>
+        <p>幫您找到最合適的航線與船公司，讓貨物能準時、順利又省成本地送達。</p>
+      `;
+      document.querySelectorAll(".card-text")[1].innerHTML = `
+        <h3>船舶租賃買賣</h3>
+        <p>不管是短租、長租還是買船，幫您找到合適的船舶，並提供安心透明的交易服務。</p>
+      `;
+      document.querySelectorAll(".card-text")[2].innerHTML = `
+        <h3>機具維護</h3>
+        <p>專業維護港口常用的大型起重設備，確保機具安全、穩定，讓作業不中斷。</p>
+      `;
+
+      // 服務項目卡片 中文 (桌機 overlay)
+      document.querySelectorAll(".overlay")[0].innerHTML = `
+        <h3>船務媒合</h3>
+        <p>本公司致力於提供專業的船務媒合服務，協助貨主精準對接船公司，確保貨物能以最適合的航線與運力進行運輸，達到效率最佳化並有效降低成本。</p>
+      `;
+      document.querySelectorAll(".overlay")[1].innerHTML = `
+        <h3>船舶租賃買賣</h3>
+        <p>我們專注於船舶租賃與買賣服務，依照客戶需求提供多元化的船舶資源。不論是短期租賃或長期購置，我們均能提供完善的諮詢、規劃與交易支持，確保流程安全透明。</p>
+      `;
+      document.querySelectorAll(".overlay")[2].innerHTML = `
+        <h3>機具維護</h3>
+        <p>我們擁有專業的維修與保養團隊，針對港口作業常用之橋式起重機、門式軌道起重機等設備，提供定期檢修與維護服務，確保設備運作安全、穩定並延長使用年限。</p>
+      `;
+
+      // 聯絡方式 中文
+      document.querySelector("#contact").innerHTML = `
+        <h2>聯絡方式</h2>
+        <p>Email：ganfone1@gmail.com</p>
+        <p>Tel：07-8313999 # 375</p>
+        <p>Fax：07-8128955</p>
+        <p>Address：812高雄市小港區東亞南路6號1樓</p>
+        <p>1 F., No. 6, Dongya S. Rd., Xiaogang Dist., Kaohsiung City</p>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.596347060602!2d120.33467689999999!3d22.5567888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e02d04b3995c3%3A0x66f0fe86324a6885!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2x5Lqe5Y2X6LevNuiZnw!5e0!3m2!1szh-TW!2stw!4v1757389990362!5m2!1szh-TW!2stw" 
+            allowfullscreen 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      `;
 
       langBtn.textContent = "English";
       isChinese = true;
@@ -328,10 +412,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
